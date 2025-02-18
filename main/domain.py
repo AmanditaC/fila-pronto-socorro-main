@@ -56,8 +56,7 @@ class Paciente:
                     "A data de nascimento não pode ser futura.")
             return nascimento
         except ValueError:
-            raise ValidacaoError(
-                "Data de nascimento inválida, use o formato DD/MM/YYYY.")
+            raise ValidacaoError("Data de nascimento inválida, use o formato DD/MM/YYYY.")
 
     def __str__(self):
         return f'Paciente: {self.nome} ({self.cpf})'
